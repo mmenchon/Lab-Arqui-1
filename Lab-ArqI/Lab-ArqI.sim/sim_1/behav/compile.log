@@ -1,5 +1,0 @@
-Determining compilation order of HDL files.
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Temp/Lab-ArqI/Lab-ArqI.srcs/sources_1/new/P1b.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Mux
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Temp/Lab-ArqI/Lab-ArqI.srcs/sim_1/new/P1b_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Mux_TB
