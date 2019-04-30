@@ -103,31 +103,30 @@ begin
     twr : process
     begin
         wr <= '0';
-        wait for 100 ns;
+        wait for 30 ns;
         wr <= '1';
-        wait for 50 ns;
+        wait for 30 ns;
     end process;
     
     tdata : process
     begin
-        
+        reg_wr <= CONV_STD_LOGIC_VECTOR(0,5);
         data_wr <= x"67663412";
-        reg_wr <= CONV_STD_LOGIC_VECTOR(7,5);
-        wait for 120 ns;
+        wait for 50 ns;
+        reg2_rd <= CONV_STD_LOGIC_VECTOR(0,5);
+        for index in 0 to 31 loop
+            --wait for 30 ns;
+            reg_wr <= CONV_STD_LOGIC_VECTOR(index,5);
+            data_wr <= CONV_STD_LOGIC_VECTOR(index+1,32);
+            wait for 50 ns;
+            reg1_rd <= CONV_STD_LOGIC_VECTOR(index,5);
+            wait for 50 ns;
+        end loop;
         
-        reg1_rd <= CONV_STD_LOGIC_VECTOR(7,5);
-        wait for 120 ns;
-        
-        reg_wr <= CONV_STD_LOGIC_VECTOR(2,5);
-        wait for 120 ns;
-        
-
-        reg1_rd <= CONV_STD_LOGIC_VECTOR(2,5);
-        wait for 120 ns;
-        
-        reg1_rd <= CONV_STD_LOGIC_VECTOR(0,5);
-        wait for 120 ns;
-        
+        for index in 0 to 31 loop
+            reg1_rd <= CONV_STD_LOGIC_VECTOR(index,5);
+            wait for 50 ns;
+        end loop;
         wait;
     end process;
 
