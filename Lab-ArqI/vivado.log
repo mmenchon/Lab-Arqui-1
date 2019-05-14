@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon May  6 14:20:38 2019
+# Process ID: 18104
+# Current directory: C:/Users/Mariano/Documents/MEGA/MEGAsync/Mega/Arquitectura de la computadoras I/Lab-Arqui-1/Lab-ArqI
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15904 C:\Users\Mariano\Documents\MEGA\MEGAsync\Mega\Arquitectura de la computadoras I\Lab-Arqui-1\Lab-ArqI\Lab-ArqI.xpr
+# Log file: C:/Users/Mariano/Documents/MEGA/MEGAsync/Mega/Arquitectura de la computadoras I/Lab-Arqui-1/Lab-ArqI/vivado.log
+# Journal file: C:/Users/Mariano/Documents/MEGA/MEGAsync/Mega/Arquitectura de la computadoras I/Lab-Arqui-1/Lab-ArqI\vivado.jou
+#-----------------------------------------------------------
+start_guioopen_project {C:/Users/Mariano/Documents/MEGA/MEGAsync/Mega/Arquitectura de la computadoras I/Lab-Arqui-1/Lab-ArqI/Lab-ArqI.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS suINFO: [Common 17-206] Exiting Vivado at Mon May  6 14:22:06 2019...
+ct path is 'C:/Users/Mariano/Documents/MEGA/MEGAsync/Mega/Arquitectura de la computadoras I/Lab-Arqui-1/Lab-ArqI'SScanning sources...
+Finished scanning sourcesINFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-170exit
+INFO: [Common 17-206] Exiting Vivado at Mon May  6 14:22:17 2019...
+do IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 738.160 ; gain = 165.695
+update_compile_order -fileset sources_1
+

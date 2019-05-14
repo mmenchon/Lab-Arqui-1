@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon May  6 14:20:38 2019
+# Process ID: 18104
+# Current directory: C:/Users/Mariano/Documents/MEGA/MEGAsync/Mega/Arquitectura de la computadoras I/Lab-Arqui-1/Lab-ArqI
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15904 C:\Users\Mariano\Documents\MEGA\MEGAsync\Mega\Arquitectura de la computadoras I\Lab-Arqui-1\Lab-ArqI\Lab-ArqI.xpr
+# Log file: C:/Users/Mariano/Documents/MEGA/MEGAsync/Mega/Arquitectura de la computadoras I/Lab-Arqui-1/Lab-ArqI/vivado.log
+# Journal file: C:/Users/Mariano/Documents/MEGA/MEGAsync/Mega/Arquitectura de la computadoras I/Lab-Arqui-1/Lab-ArqI\vivado.jou
+#-----------------------------------------------------------
+start_guioopen_project {C:/Users/Mariano/Documents/MEGA/MEGAsync/Mega/Arquitectura de la computadoras I/Lab-Arqui-1/Lab-ArqI/Lab-ArqI.xpr}update_compile_order -fileset sources_1
+
