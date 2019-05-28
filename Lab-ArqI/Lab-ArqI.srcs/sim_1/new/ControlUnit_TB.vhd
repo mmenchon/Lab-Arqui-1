@@ -63,7 +63,7 @@ signal PCSource: STD_LOGIC;
 signal TargetWrite: STD_LOGIC;
 signal AluOp: STD_LOGIC_VECTOR(1 downto 0);
 signal AluSelA: STD_LOGIC;
-signal  AluSelB: STD_LOGIC_VECTOR(1 downto 0);
+signal AluSelB: STD_LOGIC_VECTOR(1 downto 0);
 signal RegWrite: STD_LOGIC;
 signal RegDst: STD_LOGIC;
 signal PCWrite: STD_LOGIC;
