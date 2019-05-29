@@ -104,7 +104,7 @@ begin
     
     tdata: process
     begin
-        OpCode <= "101011";
+        OpCode <= "100011";
         wait for 100 ns;
     end process;
 

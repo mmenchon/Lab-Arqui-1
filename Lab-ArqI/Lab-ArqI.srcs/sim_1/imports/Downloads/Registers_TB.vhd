@@ -119,7 +119,7 @@ begin
             reg_wr <= CONV_STD_LOGIC_VECTOR(index,5);
             data_wr <= CONV_STD_LOGIC_VECTOR(index+1,32);
             wait for 50 ns;
-            reg1_rd <= CONV_STD_LOGIC_VECTOR(index,5);
+            reg2_rd <= CONV_STD_LOGIC_VECTOR(index,5);
             wait for 50 ns;
         end loop;
         

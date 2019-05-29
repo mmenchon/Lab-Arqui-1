@@ -102,6 +102,8 @@ signal Zero : std_logic;
 signal AluIn1 : std_logic_vector(31 downto 0);
 signal AluIn2 : std_logic_vector(31 downto 0);
 signal AluControl : std_logic_vector(2 downto 0);
+signal TargetOut : std_logic_vector(31 downto 0);
+
 ---------------------señales banco de registros-------------------
 signal WriteRegister : std_logic_vector(4 downto 0);
 signal WriteData : std_logic_vector(31 downto 0);
@@ -192,7 +194,7 @@ Regs : registers port map(
         data1_rd => ReadData1,
         data2_rd => ReadData2
         );
-
+-------------------------------------------ETAPA Ex----------------------------------------------------
 AluIn1 <= PC_Out when (AluSelA = '0') else ReadData1;
 
 process (AluSelB)
@@ -205,10 +207,38 @@ begin
         when "10" =>
           AluIn2 <= SignExtend;
         when "11" =>
-          AluIn2 <= SignExtend(29 downto 0) + "00"; 
+          AluIn2 <= SignExtend(29 downto 0) & "00"; 
         when others => AluIn2 <= x"00000000"; 
      end case;
 end process;
+
+--Alu Control
+ process (SignExtend (5 downto 0), AluOp)
+ begin
+      case(AluOp) is
+        when "11" =>
+             case (SignExtend(5 downto 0)) is 
+                 when "100000"=>  --ADD                  
+                       AluControl <= "010";   
+                 when"100010" => --SUB
+                       AluControl <= "110";
+                 when "100100" => -- AND
+                       AluControl <= "000";
+                 when "100101" => -- OR
+                       AluControl <= "001";
+                 when "101010" => -- SLT
+                       AluControl <= "111";
+                 when others => 
+                       AluControl <= "000";
+             end case;
+             when "01" =>  --BEQ
+                 AluControl <= "110";
+             when "00" =>  -- MEM
+                 AluControl <= "010";
+             when others =>  
+                 AluControl <= "000"; 
+     end case;   
+ end process;
 
 AluEx : alu port map(
            a => AluIn1,
@@ -218,5 +248,20 @@ AluEx : alu port map(
            zero => Zero
            );
 
+-------------------------------------------ETAPA Wb----------------------------------------------------
+
+Target : process (Clk, Reset)
+begin
+    if (Reset = '1') then
+        TargetOut <= (others => '0');
+    else if (rising_edge(Clk)) then
+            if (TargetWrite = '1') then
+                TargetOut <= AluOut;
+             end if;  
+         end if;
+    end if;
+end process;
+
+Pc_In <= AluOut when (PCSource = '0') else TargetOut;
 
 end Multicycle_MIPS_arch;

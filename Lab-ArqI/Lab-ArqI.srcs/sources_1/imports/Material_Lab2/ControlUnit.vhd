@@ -76,12 +76,10 @@ begin
             AluOp <= "00";
             TargetWrite <= '1';
             case OpCode is
-                when "000000" => --type -R
-                    next_state <= "0110";
-                when ("100011" or "101011") => --type  -LW and -SW
-                    next_state <= "0010";
-                when "000100" => --type - BEQ
-                    next_state <= "1000";
+                when "000000" => next_state <= "0110"; --type -R
+                when "100011" => next_state <= "0010"; --type  -LW and -SW
+                when "101011" => next_state <= "0010"; --type  -LW and -SW 
+                when "000100" => next_state <= "1000"; --type - BEQ
                 when others => next_state <= "0000";
             end case;
         when "0010" =>

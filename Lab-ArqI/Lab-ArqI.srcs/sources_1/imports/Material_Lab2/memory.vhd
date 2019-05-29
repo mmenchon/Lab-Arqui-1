@@ -65,7 +65,7 @@ begin
 		-- luego cargamos el archivo en la misma
 		
 		file_open(status,f,C_ELF_FILENAME_LOW,read_mode);
-	      
+	     
 	     while (not endfile (f)) loop
            readline (f, current_line);                    
            --hread(current_line, address);
