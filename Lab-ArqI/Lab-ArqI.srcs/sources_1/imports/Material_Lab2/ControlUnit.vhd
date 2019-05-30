@@ -98,13 +98,13 @@ begin
             AluSelA <= '1';
             AluSelB <= "10";
             AluOp <= "00";
+            IorD <= '1';
             next_state <= "0100";
           when "0100" =>
             MemRead <= '1';
             AluSelA <= '1';
             AluSelB <= "10";
             AluOp <= "00";
-            IorD <= '1';
             MemRead <= '1';
             RegWrite <= '1';
             MemToReg <= '1';
@@ -123,10 +123,9 @@ begin
             AluOp <= "10";
             next_state <= "0111";
         when "0111" =>
-            AluSelA <= '1';
-            AluSelB <= "00";
-            AluOp <= "10";
             MemToReg <= '0';
+            AluSelA <= '1';
+            AluOp <= "10";
             RegDst <= '1';
             RegWrite <= '1';
             next_state <= "0000";

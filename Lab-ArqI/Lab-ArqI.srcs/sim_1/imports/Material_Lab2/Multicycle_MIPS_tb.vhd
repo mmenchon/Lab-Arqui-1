@@ -60,7 +60,7 @@ architecture MultiCycle_MIPS_tb_arch  of MultiCycle_MIPS_tb is
 	signal DataIn    : std_logic_vector(31 downto 0);
 	
 	constant tper_clk  : time := 50 ns;
-	constant tdelay    : time := 120 ns; -- antes 150, sino no enta direccion 0
+	constant tdelay    : time := 75 ns; -- antes 150, sino no enta direccion 0
 
 begin
 	  

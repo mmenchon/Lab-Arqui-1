@@ -197,7 +197,7 @@ Regs : registers port map(
 -------------------------------------------ETAPA Ex----------------------------------------------------
 AluIn1 <= PC_Out when (AluSelA = '0') else ReadData1;
 
-process (AluSelB)
+process (AluSelB, ReadData2, SignExtend)
 begin
     case (AluSelB) is
         when "00" =>
@@ -216,7 +216,7 @@ end process;
  process (SignExtend (5 downto 0), AluOp)
  begin
       case(AluOp) is
-        when "11" =>
+        when "10" =>
              case (SignExtend(5 downto 0)) is 
                  when "100000"=>  --ADD                  
                        AluControl <= "010";   
