@@ -95,7 +95,7 @@ begin
 
 	Instruction_Mem_inst : memory
 	generic map (
-	  C_ELF_FILENAME_LOW     => "program1",
+	  C_ELF_FILENAME_LOW     => "C:\Users\Mariano\Desktop\mips\program1",
 	  C_ELF_FILENAME_HIGH     => "",
       C_MEM_SIZE         => 1024,
       C_MEM_HIGH_OFFSET => 1024
@@ -111,7 +111,7 @@ begin
 	
 	Data_Mem_inst : memory
 	generic map (
-	   C_ELF_FILENAME_LOW     => "data",
+	   C_ELF_FILENAME_LOW     => "C:\Users\Mariano\Desktop\mips\data",
 	   C_ELF_FILENAME_HIGH     => "",
        C_MEM_SIZE         => 1024,
        C_MEM_HIGH_OFFSET => 1024
