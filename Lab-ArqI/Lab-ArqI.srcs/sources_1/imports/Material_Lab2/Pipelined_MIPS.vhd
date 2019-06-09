@@ -36,6 +36,7 @@ architecture Pipelined_MIPS_arch of Pipelined_MIPS is
     signal IF_PcNext: std_logic_vector (31 downto 0);
     signal IF_PcIn : std_logic_vector (31 downto 0);
     signal IF_PcOut: std_logic_vector (31 downto 0);
+    
     --ID
      signal ID_MemToReg : std_logic;
     signal ID_RegWrite : std_logic;
